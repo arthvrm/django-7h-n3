@@ -1,0 +1,5 @@
+1. settings.installed_apps - добавляти apps через конструкцію - <name>.apps.<Name>Config
+2. pip install django - фреймворк
+3. pip install Pillow - можливість використовувати ImageField в models, без нього не буде обробки зображень
+    + необхідне налаштування MEDIA_URL та MEDIA_ROOT в settings
+4. 
