@@ -6,5 +6,6 @@ __pycache__/
 .idea
 .env
 
+db.sqlite3
 media/
 todo
