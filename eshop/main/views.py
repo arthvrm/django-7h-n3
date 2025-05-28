@@ -21,11 +21,11 @@ def product_detail(request, slug):
 
 
 def product_list(request: HttpRequest, category_slug=None):
-    page = request.GET.get('page', 1)
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
     paginator = Paginator(products, 10)
+    page = request.GET.get('page', 1)
     current_page = paginator.page(int(page))
     if category_slug:
         category = get_object_or_404(Category,
