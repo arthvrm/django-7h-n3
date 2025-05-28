@@ -219,7 +219,7 @@ h5 {
 }
 
 .cart-discount {
-    margin-top: 10px;
+    margin-top: -9px;
     font-weight: 600;
 }
 
@@ -344,7 +344,7 @@ h5 {
 }
 
 .cart {
-    margin-left: 54px;
+    margin-left: 60px;
     flex-direction: column;
 }
 
@@ -468,11 +468,13 @@ h5 {
 }
 
 .cart-card-price {
+    width: 87px;
     margin-top: 25.6px;
 }
 
 .cart-discount-2 {
     margin-top: -9px;
+    margin-right: -20px;
     font-weight: 600;
 }
 
@@ -482,4 +484,11 @@ h5 {
 
 .cart-buttons {
     margin-bottom: 70px;
+}
+
+.price-2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -10px;
+    margin-right: -20px;
 }
