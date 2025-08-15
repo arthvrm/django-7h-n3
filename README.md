@@ -87,3 +87,5 @@ Stripe dashboard view with full payment information for admin verification.
 ![Screenshot 2025-08-15 184249](https://github.com/user-attachments/assets/5cd2bbb3-2ef2-44b3-8439-2261dabfc870)
 
 ---
+
+not completed =)
