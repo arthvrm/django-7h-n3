@@ -97,10 +97,4 @@ Stripe dashboard view with full payment information for admin verification.
 
 ---
 
-## Tech Stack
-- **Backend:** Django + PostgreSQL  
-- **Templating:** Jinja2  
-- **Payments:** Stripe  
-- **Admin Panel:** Django Admin  
-
 ---
