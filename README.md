@@ -96,5 +96,3 @@ Stripe dashboard view with full payment information for admin verification.
 
 
 ---
-
----
