@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'users.apps.UsersConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CART_SESSION_ID = 'cart'
 
 AUTH_USER_MODEL = 'users.User'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51RNX6kIopDyPZ17Doef2kDKiFU4PlNse9rSL08Q4ICsdi4y56T3VNXKoVsoBsU3krLXOWlR5mR0mdB8RyfdVIQNh00xZmZwZC2'
+STRIPE_SECRET_KEY = 'sk_test_51RNX6kIopDyPZ17Dqb0j2IKcZTx1PcJgl22GlaTZSXeGgWTHEdJ2o8Ygzi1UlWI9Ssh3Np3zXk1jAPvb8GESFDQy00uLRtziDI'
+STRIPE_API_VERSION = '2025-04-30.basil'
+
+STRIPE_WEBHOOK_SECRET = 'whsec_228a116bae7ee571e974ee24f161ceab3b22e8e6a7172bb74fca52e3441bad59'

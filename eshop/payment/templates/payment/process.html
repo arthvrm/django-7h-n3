@@ -1,0 +1,56 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Payment Process{% endblock title %}
+
+{% block content %}
+    <div class="window">
+        <h2 class="pay-title">
+            Payment
+        </h2>
+        <div class="pay-card d-flex">
+            <div class="cart-cardsproc">
+                {% for item in order.orders.all %}
+                    {% with product=item.product %}
+                        <div class="cart-card d-flex">
+                            <div class="cart-card-img">
+                                <a href="{{ product.get_absolute_url }}"><img src="{% if product.image %}{{ product.image.url }}
+                                {% else %}{% static "img/noimage.jpg" %}{% endif %}" alt=""></a>
+                            </div>
+                            <div class="cart-card-info">
+                                <div class="cart-card-name mt-3 mb-2">
+                                    <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                                </div>
+                                <div class="cart-card-q">
+                                    <p>Quantity: {{ item.quantity }}</p>
+                                </div>
+                            </div>
+                            <form action="{% url "cart:cart_remove" product.id %}" method="post">
+                                <input type="submit" value="Remove" class="remove-btn">
+                                {% csrf_token %}
+                            </form>
+                            <div class="cart-card-price">
+                                {% if product.discount %}
+                                    <div class="cart-discount-2">
+                                        <p class="line">$ {{ product.price }}</p>
+                                        <p class="cart-discount-price">$ {{ product.sell_price }}</p>
+                                    </div>
+                                {% else %}
+                                    <p class="price-2">$ {{ product.price }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endwith %}
+                {% endfor %}
+
+                <form action="{% url "payment:process" %}" method="post" class="payform">
+                    <input type="submit" value="Pay now" class="paynow">
+                    {% csrf_token %}
+                </form>
+            </div>
+            <div class="castle-div">
+                <img src="{% static "img/castle.png" %}" class="castlep" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock content %}
