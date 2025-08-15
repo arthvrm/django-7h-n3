@@ -2,4 +2,4 @@
 2. pip install django - фреймворк
 3. pip install Pillow - можливість використовувати ImageField в models, без нього не буде обробки зображень
     + необхідне налаштування MEDIA_URL та MEDIA_ROOT в settings
-4. 
+4. register stripe and install locally, than listen to localhost:8000/payment/webhook/ via stripe in cmd
