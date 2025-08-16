@@ -1,4 +1,4 @@
-# 💎 Jewelry Shop
+# 💎 E-Commerce Jewelry Shop
 
 A modern e-commerce platform for selling **necklaces, earrings, rings, and wristbands**, built with **Django**, **PostgreSQL**, **Stripe**, and **Jinja2**.  
 This shop features **secure payments**, **product categorization**, and a **clean user experience**.  
